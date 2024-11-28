@@ -14,6 +14,7 @@ ax = fig.subplots()  # Make an axes object with name ax.
 plt.xlabel("Month number")
 plt.ylabel("Value")
 plt.xticks(months)
+plt.grid()
 ax.plot(
     months, temperatures_c, "*-b", label="temp C vs month"
 )  # Use ax.plot() to plot.
