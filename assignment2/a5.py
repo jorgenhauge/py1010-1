@@ -6,7 +6,13 @@ def area(a, b):
 
 
 def circumference(a, b):
-    return 2 * math.pi * a + b + math.sqrt(math.pow(a, 2) + math.pow(b, 2))
+    def circumference_square_figure(a, b):
+        return b + math.sqrt(math.pow(a, 2) + math.pow(b, 2))
+
+    def circumference_half_circle_figure(a):
+        return (2 * math.pi * a) / 2
+
+    return circumference_half_circle_figure(a) + circumference_square_figure(a, b)
 
 
 a = float(input("Gitt en vilkårlig figur.\nSkriv inn lengden på den ene siden: "))
