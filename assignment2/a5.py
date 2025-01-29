@@ -2,7 +2,14 @@ import math
 
 
 def area(a, b):
-    return (math.pi * math.pow(a, 2)) / 2 + (a * b) / 2
+    def area_square_figure(a, b):
+        return (a * b) / 2
+
+    def area_half_circle_figure(a):
+        r = a / 2
+        return math.pi * math.pow(r, 2)
+
+    return area_square_figure(a, b) + area_half_circle_figure(a)
 
 
 def circumference(a, b):
